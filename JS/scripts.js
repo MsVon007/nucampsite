@@ -1,6 +1,6 @@
-$(function() {
+$(() => {
     $(".carousel").carousel( { interval: 2000, pause: "false" } );
-    $("#carouselButton").click(function(){
+    $("#carouselButton").on ("click",() =>{
         console.log("pause");
         if ($("#carouselButton").children("i").hasClass("fa-pause")) {
             $(".carousel").carousel("pause");
@@ -13,12 +13,12 @@ $(function() {
         }
     });
 
-    $("#reserveButton").on ("click", function(){
+    $("#reserveButton").on ("click", () =>{
         $("#reserveModal").modal("show");
     });
 
-    $("#loginButton").on ("click", function(){
+    $("#loginButton").on ("click", () =>{
         $("#loginModal").modal("show");
     });
 
-});
+})
